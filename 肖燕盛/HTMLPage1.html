@@ -1,0 +1,498 @@
+﻿<!DOCTYPE html>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name=format-detection content="telephone=no">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="2.icon" type="image/x-icon"/>
+    <title>云家园</title>
+    <style>
+        @media screen and (max-width: 767px){
+        #login-1 {
+            height: -webkit-max-content!important;
+            height: -moz-max-content!important;
+            height: max-content!important;
+            background: #bbb;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+        }
+        
+        section {
+            overflow: hidden;
+            background: #bbb;
+            background-image: url(images/1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .visable {
+            display: block !important;
+            height: 100% !important;
+            overflow: auto !important;
+        }
+
+        .box-1 {
+            
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 0 auto;
+        }
+
+        .login-2 {
+            background-color: #fff;
+            border-radius: 8px;
+            color: #666;
+            max-width: 450px;
+            padding: 10px 30px;
+            margin: 40px auto 0;
+        }
+
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .box-2 {
+            padding: 0 20px !important;
+        }
+
+        .text-primary {
+            color: #428bca;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+        ul li {
+            background-image: url(images/7.jpg);
+            background-repeat: no-repeat;
+            background-position:16px;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-family: inherit;
+            line-height: 1.1;
+            color: inherit;
+        }
+
+        body, h3, html {
+            font-family: arial,Hiragino Sans GB,Microsoft Yahei,\\5FAE\8F6F\96C5\9ED1,\\5B8B\4F53;
+        }
+
+            h3 small {
+                font-size: 65%;
+                font-weight: 400;
+                line-height: 1;
+                color: #777;
+            }
+
+        #btn-xs {
+            padding: 1px 5px;
+            font-size: 12px;
+            line-height: 1.5;
+            border-radius: 3px;
+        }
+
+        .btn-success {
+            color: #fff;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+        }
+        .btn-success:hover{
+            background: #45a845;
+        }
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .form-horizontal .box {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .box {
+            margin-bottom: 15px;
+        }
+
+        .login-2 .inf {
+            margin-bottom: 10px;
+        }
+
+        .inf .form-horizontal {
+            padding-top: 7px;
+            margin-bottom: 0;
+            text-align: right;
+        }
+
+        .login-2 lable {
+            font-weight: 400;
+        }
+
+        lable {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        #username {
+            background-image: url(images/5.jpg);
+            background-repeat: no-repeat;
+            background-position:left;
+        }
+
+        #password {
+            background-image: url(images/6.jpg);
+            background-repeat: no-repeat;
+            background-position:left;
+        }
+
+        .kuang-position {
+            position: relative;
+        }
+
+            .kuang-position input {
+                padding-left: 30px;
+            }
+
+        .kuang {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+
+        input, button {
+            font-family: inherit;
+            margin: 0;
+            font: inherit;
+            color: inherit;
+            font-size: inherit;
+        }
+
+        .form-horizontal .checkbox {
+            min-height: 27px;
+            padding-top: 7px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .checkbox {
+            position: relative;
+            display: block;
+        }
+
+            .checkbox input[type=checkbox] {
+                position: absolute;
+                margin-left: -20px;
+            }
+
+        .checkbox {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        input[type=checkbox] {
+            margin: 4px 0 0;
+            line-height: normal;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .forget {
+            float: right !important;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        .btn-lg {
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #428bca;
+            border-color: #357ebd;
+        }
+        .btn-primary:hover {
+            background: #2e71ac;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        .alert {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .alert-warning {
+            color: #8a6d3b;
+            background-color: #fcf8e3;
+            border-color: #faebcc;
+        }
+
+        .alert-dismissible .close {
+            position: relative;
+            top: -2px;
+            right: -21px;
+            color: inherit;
+        }
+
+        button.close {
+            -webkit-appearance: none;
+            padding: 0;
+            cursor: pointer;
+            background: 0 0;
+            border: 0;
+        }
+
+        .alert-dismissible {
+            padding-right: 35px;
+        }
+
+        .close {
+            float: right;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            filter: alpha(opacity=20);
+            opacity: .2;
+        }
+
+        button {
+            text-transform: none;
+            overflow: visible;
+        }
+
+        img {
+            vertical-align: middle;
+            border: 0;
+        }
+
+        blockquote {
+            padding: 10px 20px;
+            margin: 0 0 20px;
+            font-size: 17.5px;
+            border-left: 5px solid #eee;
+        }
+
+        .col-xs-6 {
+            width: 50%;
+            float: left;
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .btn-danger {
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d43f3a;
+            background-image: url(images/apple.jpg);
+            background-repeat: no-repeat;
+            background-position:left;
+            background-position:50px;
+        }
+        .btn-danger:hover {
+            background: #c43d38;
+        }
+        .android {
+            background-image: url(images/android.jpg);
+            background-repeat: no-repeat;
+            background-position:35px;
+        }
+        .small {
+            background-image: url(images/finger.jpg);
+            background-repeat: no-repeat;
+            background-position:135px;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #5f6468;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.42857143;
+            background-color: #ffff;
+            margin: 0;
+        }
+
+        body, h3, html {
+            font-family: arial,Hiragino Sans GB,Microsoft Yahei,\\5FAE\8F6F\96C5\9ED1,\\5B8B\4F53;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+
+        html {
+            font-size: 10px;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+
+        a {
+            cursor: pointer;
+            color: #428bca;
+            text-decoration: none;
+            background: 0 0;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn:hover {
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+        <section id="login-1" class="visable">
+            <div class="box-1">
+                <form class="login-2 form-horizontal" role="form">
+                    <div class="row box-2">
+                        <h3 class="text-center text-primary">
+                            <ul>
+                                <li>
+                                    云家园
+                                                    <small>信息服务平台</small>
+                                                    <a class="btn btn-success" id="btn-xs" target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=1ffcd88386a31108288aa8ef1b3879522672818d153e00e6f492d13ebf13efae">帮助</a>
+                                </li>
+                            </ul>
+                        </h3>
+                        <div class="box">
+                            <lable for="username" class="inf">帐号</lable>
+                            <div class="kuang-position">
+                                <i class="fa fa-user"></i>
+                                <input type="text" class="kuang" id="username" placeholder="请输入学号/工资号" />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <lable for="password" class="inf">密码</lable>
+                            <div class="kuang-position">
+                                <input type="password" class="kuang" id="password" placeholder="密码" />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="checkbox">
+                                <lable><input value="ture" type="checkbox" checked="checked" />下次自动登录></lable>
+                                <div class="forget">
+                                    <a class="text-center text-primary" href="/loginBox/regainPassword">忘记密码?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <span class="btn-block btn-lg btn-primary btn"> 登录 </span>
+                        </div>
+                        <div class="box">
+                            <a data-toggle="modal" href="#reg" class="text-center">
+                                <span class="btn-block btn-lg btn-primary btn">
+                                    <strong>新生注册</strong>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="box alert alert-warning alert-dismissible" role="alert" style="height: 132.375px;">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <p style="margin-top: -5px; margin-bottom: 5px;">
+                                <strong>新生(本科)自助报到系统</strong>
+                                请关注
+                                <strong>南昌大学家园网</strong>
+                                微信公众号，了解更多具体新生报道系统流程<br>
+                                家园工作室QQ：<a href="http://qm.qq.com/cgi-bin/qm/qr?k=OtyR5Xib0OPbuAtjZtXeyVc5-a6y7zQU">2459289916</a> <br>
+                                2020南昌大学本科迎新群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=pCH_WujTSR0gER5lAakD1mbywk5EXK1X&amp;jump_from=webapi"><img border="0" src="images/group.png" alt="南昌大学2020官方迎新" title="南昌大学2020官方迎新"></a>
+                                <br>
+                                校园APP：<a target="_blank" href="https://incu.ncuos.com">南大家园</a>
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <blockquote style="width: 410px; margin-left: -15px;">
+                                <div class="row" style="height: 34px;">
+                                    <div class="col-xs-6">
+                                        <a target="_blank" class="hover-rul btn btn-block btn-danger" href="https://itunes.apple.com/us/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561?mt=8">
+                                            ios版
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a target="_blank" class="hover-rul btn btn-block btn-success android" href="http://incu-download.ncuos.com/iNCU_latest.apk">
+                                            Android版
+                                        </a>
+                                    </div>
+                                </div>
+                            </blockquote>
+                            <p class="small">
+                                <small>下载南大家园手机客户端 </small>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <p class="text-center" style="color:#fff; padding-top:10px;">
+                 Powered By 
+                 <a href="http://team.ncuos.com/" target="-blank" style="color:#ffffff">家园工作室</a> 
+                </p>
+        </section>
+</body>
+</html>
